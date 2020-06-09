@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 #If you want to access and change the private variables, accessor (getter) methods 
 #and mutators(setter methods) should be used, as they are part of Class. 
+=======
+
+>>>>>>> Swap_Nibbles
 class Person:
     def __init__(self, name, age):
         self.name = name

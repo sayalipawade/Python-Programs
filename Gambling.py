@@ -14,9 +14,14 @@ class GamblingSimulator:
 
     # Taking input from user
     def take_input(self):
-        stake_amount = int(input("Enter stake amount : "))
-        goal_amount = int(input("Enter goal amount : "))
-        bet_amount = int(input("Enter bet amount : "))
+        try:
+            stake_amount = int(input("Enter stake amount : "))
+            goal_amount = int(input("Enter goal amount : "))
+            bet_amount = int(input("Enter bet amount : "))
+        except ValueError:
+            print('Invalid value')
+        except:
+            print('Something else went wrong')
         
     # user playing game
     def play_game(self):
@@ -36,10 +41,13 @@ class GamblingSimulator:
 
     #Percentage for win and loss
     def calculate_percentage(self):
-        win_percentage = win_count*100/NUMBER_OF_TIMES
-        print("win percentage is:", win_percentage)
-        loss_percentage = loss_count*100/NUMBER_OF_TIMES
-        print("loss percentage is:", loss_percentage)
+        try:
+            win_percentage = win_count*100/NUMBER_OF_TIMES
+            print("win percentage is:", win_percentage)
+            loss_percentage = loss_count*100/NUMBER_OF_TIMES
+            print("loss percentage is:", loss_percentage)
+        except ZeroDivisionError:
+            print('Divide by zero exception')
 
 #Creating object of class
 gambler=GamblingSimulator()
