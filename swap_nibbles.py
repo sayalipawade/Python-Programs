@@ -14,8 +14,3 @@ swap_nibble=Swap_nibbles()
 number=int(input("Enter number:"))
 result=swap_nibble.swapping_nibbles(number)
 print("After swapping nibbles number is:",result)
-
-
-
-
-  
