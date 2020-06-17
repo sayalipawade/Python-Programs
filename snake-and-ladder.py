@@ -17,6 +17,8 @@ player_position=STARTING_POSITION
 game_record={}
 
 class Snake_ladder:
+
+    #Function for player moves
     def set_player_moves(self):
         win_time=0
         for index in range(0,WINNING_POSITION+1):
@@ -31,10 +33,12 @@ class Snake_ladder:
                 self.snake()
         return win_time
 
+    #If user wants to no play
     def no_play(self):
         global player_position
         player_position=player_position
 
+    #Function for ladder
     def ladder(self):
         player_position=0
         win_time=0
@@ -42,7 +46,8 @@ class Snake_ladder:
        
         if player_position > WINNING_POSITION:
             player_position=player_position-die_value
-        
+
+    #Function for snake  
     def snake(self):
         player_position=0
         player_position=player_position-die_value
@@ -53,6 +58,7 @@ snake_ladder=Snake_ladder()
 player1=snake_ladder.set_player_moves()
 player2=snake_ladder.set_player_moves()
 
+#Which player will win the game
 if player1 < player2:
     print('player1 wins')
 else:
