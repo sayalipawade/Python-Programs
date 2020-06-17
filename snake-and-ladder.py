@@ -19,7 +19,7 @@ game_record={}
 class Snake_ladder:
     def set_player_moves(self):
         win_time=0
-        while player_position != WINNING_POSITION:
+        for index in range(0,WINNING_POSITION+1):
             die_value=random.randint(1,6)
             playing_option=random.randint(0,2)
             if playing_option == 0:
@@ -43,7 +43,6 @@ class Snake_ladder:
         if player_position > WINNING_POSITION:
             player_position=player_position-die_value
         
-    
     def snake(self):
         player_position=0
         player_position=player_position-die_value
