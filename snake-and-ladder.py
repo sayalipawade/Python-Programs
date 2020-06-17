@@ -13,9 +13,6 @@ player2=0
 win_time=0
 player_position=STARTING_POSITION
 
-#Dictionary
-game_record={}
-
 class Snake_ladder:
 
     #Function for player moves
